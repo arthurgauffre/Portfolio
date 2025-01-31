@@ -24,7 +24,7 @@ export default function GithubProjects({ repositories }: { repositories: PinnedR
                 )}
             </div>
             {showModal && (
-                <ProjectDetailModal repo={repositories[indexRepo]} />
+                <ProjectDetailModal repo={repositories[indexRepo]} setShowModal={setShowModal} />
             )}
         </div>
     );
