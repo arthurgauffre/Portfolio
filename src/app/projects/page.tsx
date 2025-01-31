@@ -1,8 +1,7 @@
 import { GetPinnedRepositories, PinnedRepositoryData } from "@/components/github/githubQuery";
-import GitHubBox from "@/components/github/GithubBox";
+import GithubProjects from "@/components/github/GithubProjects";
 
 export default async function Home() {
-    const query = GetPinnedRepositories
     let repositories: PinnedRepositoryData[] = [];
 
     try {
@@ -12,7 +11,7 @@ export default async function Home() {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
             },
-            body: JSON.stringify({ query }),
+            body: JSON.stringify({ query: GetPinnedRepositories }),
         });
 
         if (!response.ok) {
@@ -26,18 +25,6 @@ export default async function Home() {
     }
 
     return (
-        <div className="w-full h-screen flex flex-col items-center justify-center">
-            <h1 className="text-3xl font-bold mb-6">Pinned Projects</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-3/4">
-                {repositories.length > 0 ? (
-                    repositories.map((repo: PinnedRepositoryData, index: number) => (
-                        console.log(repo),
-                        <GitHubBox key={index} repo={repo} index={index} />
-                    ))
-                ) : (
-                    <p>Loading projects...</p>
-                )}
-            </div>
-        </div>
+        <GithubProjects repositories={repositories} />
     );
 }
