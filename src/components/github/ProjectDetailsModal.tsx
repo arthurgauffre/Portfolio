@@ -1,56 +1,77 @@
 import { PinnedRepositoryData } from "./githubQuery";
 
-export default function ProjectDetailModal({ repo, setShowModal }:
-    { repo: PinnedRepositoryData, setShowModal: (value: boolean) => void }
-) {
+export default function ProjectDetailModal({ repo, setShowModal }: { repo: PinnedRepositoryData, setShowModal: (value: boolean) => void }) {
     return (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-auto shadow-xl relative">
+        <div className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 pixel-font">
+            <div className="crt-overlay"></div>
+
+            <div className="bg-[#0a0a0a] border-4 border-[#2b1a45] rounded-lg p-6 max-w-2xl w-full max-h-[90vh] overflow-auto relative shadow-[0_0_20px_5px_rgba(255,56,253,0.3)]">
+                <div className="absolute top-2 left-2 w-2 h-2 bg-[#ff38fd]"></div>
+                <div className="absolute top-2 right-2 w-2 h-2 bg-[#ff38fd]"></div>
+                <div className="absolute bottom-2 left-2 w-2 h-2 bg-[#ff38fd]"></div>
+                <div className="absolute bottom-2 right-2 w-2 h-2 bg-[#ff38fd]"></div>
+
                 <button
-                    className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+                    className="absolute top-2 right-2 text-[#ff38fd] hover:text-[#00f3ff] transition-colors text-2xl"
                     onClick={() => setShowModal(false)}
                 >
-                    ✕
+                    [X]
                 </button>
 
-                <h2 className="text-3xl font-bold mb-4 text-white">{repo.name}</h2>
-                <p className="text-lg mb-6 text-gray-300">{repo.description || "No description available"}</p>
+                <div className="mb-6 border-b-2 border-[#3a2a55] pb-4">
+                    <h2 className="text-3xl text-[#00f3ff] drop-shadow-[0_0_8px_rgba(0,243,255,0.5)]">
+                        {repo.name}
+                        <span className="text-[#ff38fd] ml-3 text-xl">v1.0</span>
+                    </h2>
+                    <p className="text-[#00ff00] mt-2 text-lg glow-green">
+                        {repo.description || "CLASSIFIED DATA - ACCESS RESTRICTED"}
+                    </p>
+                </div>
 
-                <div className="flex flex-wrap gap-4 mb-6">
-                    <div className="flex items-center bg-gray-700 px-3 py-1 rounded-full">
-                        <span className="text-yellow-400 mr-2">⭐</span>
-                        <span className="text-sm text-white">{repo.stargazerCount} Stars</span>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
+                        <h3 className="text-[#ffd700] text-sm mb-2">XP COLLECTED</h3>
+                        <div className="flex items-center">
+                            <span className="text-2xl text-[#ffd700] mr-2">★</span>
+                            <span className="text-xl text-white">{repo.stargazerCount}</span>
+                        </div>
                     </div>
-                    <div className="flex items-center bg-gray-700 px-3 py-1 rounded-full">
-                        <span className="text-gray-300 mr-2">🍴</span>
-                        <span className="text-sm text-white">{repo.forkCount} Forks</span>
+                    <div className="bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
+                        <h3 className="text-[#00ff00] text-sm mb-2">ACTIVE PLAYERS</h3>
+                        <div className="flex items-center">
+                            <span className="text-2xl text-[#00ff00] mr-2">👥</span>
+                            <span className="text-xl text-white">{repo.forkCount}</span>
+                        </div>
                     </div>
                 </div>
 
-                <div className="mb-6">
-                    <span className="text-sm font-semibold text-gray-400">Primary Language:</span>
-                    <div
-                        className="inline-flex items-center px-3 py-1 rounded-full ml-2"
-                        style={{ backgroundColor: `${repo.primaryLanguage.color}20` }}
-                    >
+                <div className="mb-6 bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
+                    <h3 className="text-[#00f3ff] text-sm mb-2">PRIMARY WEAPON</h3>
+                    <div className="flex items-center">
                         <div
-                            className="w-2 h-2 rounded-full mr-2"
-                            style={{ backgroundColor: repo.primaryLanguage.color }}
+                            className="w-4 h-4 rounded-full mr-3 shadow-[0_0_8px]"
+                            style={{
+                                backgroundColor: repo.primaryLanguage.color,
+                                boxShadow: `0 0 8px ${repo.primaryLanguage.color}`
+                            }}
                         />
-                        <span className="text-sm" style={{ color: repo.primaryLanguage.color }}>
+                        <span
+                            className="text-lg font-bold"
+                            style={{ color: repo.primaryLanguage.color }}
+                        >
                             {repo.primaryLanguage.name}
                         </span>
                     </div>
                 </div>
 
                 {repo.repositoryTopics.edges.length > 0 && (
-                    <div className="mb-6">
-                        <h3 className="text-sm font-semibold text-gray-400 mb-2">Topics:</h3>
+                    <div className="mb-6 bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
+                        <h3 className="text-[#ff38fd] text-sm mb-3">UPGRADES INSTALLED</h3>
                         <div className="flex flex-wrap gap-2">
                             {repo.repositoryTopics.edges.map((edge, index) => (
                                 <span
                                     key={index}
-                                    className="px-3 py-1 bg-gray-700 text-sm rounded-full text-white"
+                                    className="px-3 py-1 text-sm border-2 border-[#00f3ff] rounded-full text-[#00f3ff] bg-black/20"
                                 >
                                     {edge.node.topic.name}
                                 </span>
@@ -63,22 +84,12 @@ export default function ProjectDetailModal({ repo, setShowModal }:
                     href={repo.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full py-3 px-6 bg-white/10 hover:bg-white/20 transition-colors rounded-lg text-white group"
+                    className="w-full flex items-center justify-center bg-[#2b1a45] hover:bg-[#3a2a55] border-2 border-[#ff38fd] text-[#ff38fd] p-3 rounded-lg transition-all hover:scale-105 group"
                 >
-                    View on GitHub
-                    <svg
-                        className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                    </svg>
+                    GITHUB LINK
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform">
+                        ▶
+                    </span>
                 </a>
             </div>
         </div>
