@@ -1,9 +1,9 @@
-import { GET_PINNED_REPOSITORIES } from "@/components/github/githubQuery";
+import { GetPinnedRepositories, PinnedRepositoryData } from "@/components/github/githubQuery";
+import GitHubBox from "@/components/github/GithubBox";
 
 export default async function Home() {
-    const query = GET_PINNED_REPOSITORIES
-
-    let repositories = [];
+    const query = GetPinnedRepositories
+    let repositories: PinnedRepositoryData[] = [];
 
     try {
         const response = await fetch("https://api.github.com/graphql", {
@@ -30,17 +30,9 @@ export default async function Home() {
             <h1 className="text-3xl font-bold mb-6">Pinned Projects</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-3/4">
                 {repositories.length > 0 ? (
-                    repositories.map((repo: any, index: number) => (
-                        <a
-                            key={index}
-                            href={repo.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-gray-800 text-white p-4 rounded-lg shadow-md hover:bg-gray-700 transition"
-                        >
-                            <h2 className="text-xl font-semibold">{repo.name}</h2>
-                            <p className="text-yellow-400 mt-2">⭐ {repo.stargazerCount} stars</p>
-                        </a>
+                    repositories.map((repo: PinnedRepositoryData, index: number) => (
+                        console.log(repo),
+                        <GitHubBox key={index} repo={repo} index={index} />
                     ))
                 ) : (
                     <p>Loading projects...</p>

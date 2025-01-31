@@ -1,4 +1,4 @@
-export const GET_PINNED_REPOSITORIES = `
+export const GetPinnedRepositories = `
     query {
         viewer {
             pinnedItems(first: 10, types: REPOSITORY) {
@@ -28,3 +28,24 @@ export const GET_PINNED_REPOSITORIES = `
         }
     }
 `;
+
+export interface PinnedRepositoryData {
+    name: string;
+    description: string;
+    url: string;
+    stargazerCount: number;
+    forkCount: number;
+    primaryLanguage: {
+        name: string;
+        color: string;
+    };
+    repositoryTopics: {
+        edges: {
+            node: {
+                topic: {
+                    name: string;
+                };
+            };
+        }[];
+    };
+}
