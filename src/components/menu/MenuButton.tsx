@@ -8,8 +8,8 @@ export default function MenuButton({ name, redirect }: { name: string; redirect:
 
     return (
         <Link
-            className={`bg-black p-2 m-2 sm:w-full rounded text-center transition-all duration-300 ease-in-out md:hover:w-full text-white
-                        ${isActive ? "w-full" : "md:w-3/4"}`}
+            className={`bg-black p-2 m-2 rounded text-center transition-all duration-300 ease-in-out md:hover:w-full text-white
+                        ${isActive ? "w-full" : "w-[80%]"}`}
             href={redirect}
         >
             {name}
