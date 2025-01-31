@@ -5,7 +5,7 @@ import GitHubBox from "./GithubBox";
 import { PinnedRepositoryData } from "./githubQuery";
 import ProjectDetailModal from "./ProjectDetailsModal";
 
-export default function GithubProjects( { repositories }: { repositories: PinnedRepositoryData[] } ) {
+export default function GithubProjects({ repositories }: { repositories: PinnedRepositoryData[] }) {
     const [showModal, setShowModal] = useState(false);
     const [indexRepo, setIndexRepo] = useState(0);
 
@@ -15,9 +15,9 @@ export default function GithubProjects( { repositories }: { repositories: Pinned
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-3/4">
                 {repositories.length > 0 ? (
                     repositories.map((repo: PinnedRepositoryData, index: number) => (
-                        // <button onClick={() => { setIndexRepo(index); setShowModal(true); console.log(showModal) }} key={index}>
-                        <GitHubBox repo={repo} index={index} key={index}/>
-                        // </button>
+                        <button onClick={() => { setIndexRepo(index); setShowModal(true); console.log(showModal) }} key={index}>
+                            <GitHubBox repo={repo} index={index} key={index} />
+                        </button>
                     ))
                 ) : (
                     <p>Loading projects...</p>
