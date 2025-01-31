@@ -40,8 +40,8 @@ export default function Menu() {
                         
                         <MenuButton name="Home" redirect="/" />
                         <MenuButton name="Profile" redirect="/profil" />
-                        <MenuButton name="Missions" redirect="/projects" />
-                        <MenuButton name="Archive" redirect="/ressources" />
+                        <MenuButton name="Projects" redirect="/projects" />
+                        <MenuButton name="Ressources" redirect="/ressources" />
                     </div>
 
                     {/* Terminal Footer */}

@@ -30,14 +30,14 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
-                        <h3 className="text-[#ffd700] text-sm mb-2">XP COLLECTED</h3>
+                        <h3 className="text-[#ffd700] text-sm mb-2">STAR</h3>
                         <div className="flex items-center">
                             <span className="text-2xl text-[#ffd700] mr-2">★</span>
                             <span className="text-xl text-white">{repo.stargazerCount}</span>
                         </div>
                     </div>
                     <div className="bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
-                        <h3 className="text-[#00ff00] text-sm mb-2">ACTIVE PLAYERS</h3>
+                        <h3 className="text-[#00ff00] text-sm mb-2">FORK</h3>
                         <div className="flex items-center">
                             <span className="text-2xl text-[#00ff00] mr-2">👥</span>
                             <span className="text-xl text-white">{repo.forkCount}</span>
@@ -46,7 +46,7 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
                 </div>
 
                 <div className="mb-6 bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
-                    <h3 className="text-[#00f3ff] text-sm mb-2">PRIMARY WEAPON</h3>
+                    <h3 className="text-[#00f3ff] text-sm mb-2">PRIMARY LANGUAGE</h3>
                     <div className="flex items-center">
                         <div
                             className="w-4 h-4 rounded-full mr-3 shadow-[0_0_8px]"
@@ -66,7 +66,7 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
 
                 {repo.repositoryTopics.edges.length > 0 && (
                     <div className="mb-6 bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
-                        <h3 className="text-[#ff38fd] text-sm mb-3">UPGRADES INSTALLED</h3>
+                        <h3 className="text-[#ff38fd] text-sm mb-3">TOPICS</h3>
                         <div className="flex flex-wrap gap-2">
                             {repo.repositoryTopics.edges.map((edge, index) => (
                                 <span
