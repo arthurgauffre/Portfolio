@@ -8,8 +8,8 @@ export default function Menu() {
 
     return (
         <div className={`flex h-screen md:w-[20%] w-[30%] ${isOpen ? 'relative' : 'fixed'}`}>
-            <button 
-                onClick={() => setIsOpen(!isOpen)} 
+            <button
+                onClick={() => setIsOpen(!isOpen)}
                 className="absolute top-4 left-4 bg-gray-800 text-white p-2 rounded-full z-50"
             >
                 {isOpen ? <ChevronLeft size={24} /> : <ChevronRight size={24} />}
