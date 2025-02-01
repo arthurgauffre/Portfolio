@@ -17,7 +17,7 @@ export default function GithubProjects({ repositories }: { repositories: PinnedR
                 <div className="h-full w-full bg-[url('/grid-pattern.svg')] bg-repeat animate-grid-scroll"></div>
             </div>
 
-            <div className="relative">
+            <div className="relative w-[50%] h-full">
                 <h1 className="text-4xl text-[#00f3ff] mb-8 text-center drop-shadow-[0_0_12px_rgba(0,243,255,0.5)]">
                     <span className="text-[#ff38fd]">ARCADE</span> TERMINAL
                     <div className="text-sm mt-2 text-[#00ff00]">SELECT YOUR MISSION</div>
