@@ -38,7 +38,7 @@ export default function Menu() {
                         <MenuButton name="Projects" redirect="/projects" />
 
                         <div className="mt-8 border-t-2 border-[#3a2a55] pt-4">
-                            <h3 className="text-arcade-pink text-sm mb-3">CONTACT PROTOCOLS</h3>
+                            <h3 className="text-arcade-pink text-sm mb-3">CONTACTS</h3>
                             <div className="space-y-3">
                                 <div className="text-arcade-blue text-sm">
                                     <span className="glow-cyan">{mail}</span>
@@ -67,7 +67,7 @@ export default function Menu() {
                     </div>
 
                     <div className="sticky bottom-0 w-full p-2 bg-arcade-darkPurple border-t-2 border-arcade-pink text-center text-sm text-arcade-blue">
-                        [ SYSTEM MENU v1.4.2 ]
+                        [ MENU ]
                     </div>
                 </div>
             </div>
