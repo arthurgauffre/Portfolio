@@ -2,7 +2,7 @@ import homeConfig from '../config/homeConfig.json';
 
 export default function Home() {
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center bg-[#0a0a0a] p-8 pixel-font overflow-y-auto">
+    <div className="w-full h-screen flex flex-col items-center justify-center bg-arcade-darkGrey p-8 pixel-font overflow-y-auto">
       <h1 className="text-4xl text-arcade-pink glow-pink mb-8 border-b-2 border-arcade-blue pb-4">
         {homeConfig.welcomeMessage}
       </h1>
@@ -27,7 +27,7 @@ export default function Home() {
         href={homeConfig.githubLink.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-8 bg-arcade-pink text-[#0a0a0a] px-6 py-3 rounded-full hover:bg-arcade-blueborder-arcade-blue transition-all border-2 border-arcade-blue font-bold"
+        className="mt-8 bg-arcade-pink text-arcade-darkGrey px-6 py-3 rounded-full hover:bg-arcade-blueborder-arcade-blue transition-all border-2 border-arcade-blue font-bold"
       >
         {homeConfig.githubLink.buttonText}
       </a>

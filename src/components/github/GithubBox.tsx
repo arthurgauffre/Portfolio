@@ -2,7 +2,7 @@ import { PinnedRepositoryData } from "./githubQuery";
 
 export default function GitHubBox({ repo, index }: { repo: PinnedRepositoryData; index: number; }) {
     return (
-        <div className="relative bg-[#0a0a0a] p-4 rounded-lg border-4 border-[#2b1a45] hover:border-arcade-pink transition-all group pixel-font">
+        <div className="relative bg-arcade-darkGrey p-4 rounded-lg border-4 border-[#2b1a45] hover:border-arcade-pink transition-all group pixel-font">
             <div className="absolute top-2 left-2 w-2 h-2 bg-arcade-pink"></div>
             <div className="absolute top-2 right-2 w-2 h-2 bg-arcade-pink"></div>
             <div className="absolute bottom-2 left-2 w-2 h-2 bg-arcade-pink"></div>

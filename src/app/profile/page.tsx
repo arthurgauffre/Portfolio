@@ -6,7 +6,7 @@ export default function Profile() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
     return (
-        <div className="w-full h-screen flex flex-row-reverse bg-[#0a0a0a] text-white pixel-font">
+        <div className="w-full h-screen flex flex-row-reverse bg-arcade-darkGrey text-white pixel-font">
             {/* PDF Sidebar */}
             <div className={`h-full relative transition-all duration-500 ${
                 isSidebarOpen ? 'w-1/3' : 'w-0'

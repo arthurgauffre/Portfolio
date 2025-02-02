@@ -10,7 +10,7 @@ export default function GithubProjects({ repositories }: { repositories: PinnedR
     const [indexRepo, setIndexRepo] = useState(0);
 
     return (
-        <div className="w-full h-screen flex flex-col items-center justify-center bg-[#0a0a0a] pixel-font relative overflow-hidden">
+        <div className="w-full h-screen flex flex-col items-center justify-center bg-arcade-darkGrey pixel-font relative overflow-hidden">
             <div className="crt-overlay"></div>
             
             <div className="absolute inset-0 opacity-20">

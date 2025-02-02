@@ -15,6 +15,7 @@ export default {
           purple: "#6b5288",
           darkPurple: "#1a0a2b",
           green: "#00ff00",
+          darkGrey: "#0a0a0a",
         },
         background: "var(--background)",
         foreground: "var(--foreground)",

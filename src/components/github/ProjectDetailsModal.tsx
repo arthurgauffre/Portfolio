@@ -5,7 +5,7 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
         <div className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 pixel-font">
             <div className="crt-overlay"></div>
 
-            <div className="bg-[#0a0a0a] border-4 border-[#2b1a45] rounded-lg p-6 max-w-2xl w-full max-h-[90vh] overflow-auto relative shadow-[0_0_20px_5px_rgba(255,56,253,0.3)]">
+            <div className="bg-arcade-darkGrey border-4 border-[#2b1a45] rounded-lg p-6 max-w-2xl w-full max-h-[90vh] overflow-auto relative shadow-[0_0_20px_5px_rgba(255,56,253,0.3)]">
                 <div className="absolute top-2 left-2 w-2 h-2 bg-arcade-pink"></div>
                 <div className="absolute top-2 right-2 w-2 h-2 bg-arcade-pink"></div>
                 <div className="absolute bottom-2 left-2 w-2 h-2 bg-arcade-pink"></div>

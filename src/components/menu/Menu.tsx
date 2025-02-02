@@ -24,7 +24,7 @@ export default function Menu() {
             <div className={`fixed h-screen transition-all duration-500 ${
                 isOpen ? 'translate-x-0' : '-translate-x-full'
             }`}>
-                <div className="w-[240px] h-full bg-gradient-to-b from-[#0a0a0a] to-arcade-darkPurple border-r-4 border-arcade-pink relative flex flex-col">
+                <div className="w-[240px] h-full bg-gradient-to-b from-arcade-darkGrey to-arcade-darkPurple border-r-4 border-arcade-pink relative flex flex-col">
                     {/* Pixel Corners */}
                     <div className="absolute top-2 left-2 w-2 h-2 bg-arcade-pink"></div>
                     <div className="absolute top-2 right-2 w-2 h-2 bg-arcade-pink"></div>
