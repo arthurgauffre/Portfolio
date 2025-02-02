@@ -2,17 +2,17 @@ import { PinnedRepositoryData } from "./githubQuery";
 
 export default function GitHubBox({ repo, index }: { repo: PinnedRepositoryData; index: number; }) {
     return (
-        <div className="relative bg-[#0a0a0a] p-4 rounded-lg border-4 border-[#2b1a45] hover:border-[#ff38fd] transition-all group pixel-font">
-            <div className="absolute top-2 left-2 w-2 h-2 bg-[#ff38fd]"></div>
-            <div className="absolute top-2 right-2 w-2 h-2 bg-[#ff38fd]"></div>
-            <div className="absolute bottom-2 left-2 w-2 h-2 bg-[#ff38fd]"></div>
-            <div className="absolute bottom-2 right-2 w-2 h-2 bg-[#ff38fd]"></div>
+        <div className="relative bg-[#0a0a0a] p-4 rounded-lg border-4 border-[#2b1a45] hover:border-arcade-pink transition-all group pixel-font">
+            <div className="absolute top-2 left-2 w-2 h-2 bg-arcade-pink"></div>
+            <div className="absolute top-2 right-2 w-2 h-2 bg-arcade-pink"></div>
+            <div className="absolute bottom-2 left-2 w-2 h-2 bg-arcade-pink"></div>
+            <div className="absolute bottom-2 right-2 w-2 h-2 bg-arcade-pink"></div>
 
-            <div className="absolute top-0 right-0 bg-[#2b1a45] px-2 py-1 text-sm text-[#00f3ff]">
+            <div className="absolute top-0 right-0 bg-[#2b1a45] px-2 py-1 text-sm text-arcade-blue">
                 #{String(index + 1).padStart(2, '0')}
             </div>
 
-            <h2 className="text-2xl text-[#00f3ff] mb-4 drop-shadow-[0_0_4px_rgba(0,243,255,0.7)]">
+            <h2 className="text-2xl text-arcade-blue mb-4 drop-shadow-[0_0_4px_rgba(0,243,255,0.7)]">
                 {repo.name}
             </h2>
 
@@ -26,9 +26,9 @@ export default function GitHubBox({ repo, index }: { repo: PinnedRepositoryData;
                 </div>
 
                 <div className="text-center">
-                    <p className="text-[#00ff00] text-sm">FORK</p>
+                    <p className="text-arcade-green text-sm">FORK</p>
                     <div className="flex items-center">
-                        <span className="text-[#00ff00] mr-1">👥</span>
+                        <span className="text-arcade-green mr-1">👥</span>
                         <span className="text-white">{repo.forkCount}</span>
                     </div>
                 </div>

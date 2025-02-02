@@ -6,24 +6,24 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
             <div className="crt-overlay"></div>
 
             <div className="bg-[#0a0a0a] border-4 border-[#2b1a45] rounded-lg p-6 max-w-2xl w-full max-h-[90vh] overflow-auto relative shadow-[0_0_20px_5px_rgba(255,56,253,0.3)]">
-                <div className="absolute top-2 left-2 w-2 h-2 bg-[#ff38fd]"></div>
-                <div className="absolute top-2 right-2 w-2 h-2 bg-[#ff38fd]"></div>
-                <div className="absolute bottom-2 left-2 w-2 h-2 bg-[#ff38fd]"></div>
-                <div className="absolute bottom-2 right-2 w-2 h-2 bg-[#ff38fd]"></div>
+                <div className="absolute top-2 left-2 w-2 h-2 bg-arcade-pink"></div>
+                <div className="absolute top-2 right-2 w-2 h-2 bg-arcade-pink"></div>
+                <div className="absolute bottom-2 left-2 w-2 h-2 bg-arcade-pink"></div>
+                <div className="absolute bottom-2 right-2 w-2 h-2 bg-arcade-pink"></div>
 
                 <button
-                    className="absolute top-2 right-2 text-[#ff38fd] hover:text-[#00f3ff] transition-colors text-2xl"
+                    className="absolute top-2 right-2 text-arcade-pink hover:text-arcade-blue transition-colors text-2xl"
                     onClick={() => setShowModal(false)}
                 >
                     [X]
                 </button>
 
                 <div className="mb-6 border-b-2 border-[#3a2a55] pb-4">
-                    <h2 className="text-3xl text-[#00f3ff] drop-shadow-[0_0_8px_rgba(0,243,255,0.5)]">
+                    <h2 className="text-3xl text-arcade-blue drop-shadow-[0_0_8px_rgba(0,243,255,0.5)]">
                         {repo.name}
-                        <span className="text-[#ff38fd] ml-3 text-xl">v1.0</span>
+                        <span className="text-arcade-pink ml-3 text-xl">v1.0</span>
                     </h2>
-                    <p className="text-[#00ff00] mt-2 text-lg glow-green">
+                    <p className="text-arcade-green mt-2 text-lg glow-green">
                         {repo.description || "CLASSIFIED DATA - ACCESS RESTRICTED"}
                     </p>
                 </div>
@@ -37,16 +37,16 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
                         </div>
                     </div>
                     <div className="bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
-                        <h3 className="text-[#00ff00] text-sm mb-2">FORK</h3>
+                        <h3 className="text-arcade-green text-sm mb-2">FORK</h3>
                         <div className="flex items-center">
-                            <span className="text-2xl text-[#00ff00] mr-2">👥</span>
+                            <span className="text-2xl text-arcade-green mr-2">👥</span>
                             <span className="text-xl text-white">{repo.forkCount}</span>
                         </div>
                     </div>
                 </div>
 
                 <div className="mb-6 bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
-                    <h3 className="text-[#00f3ff] text-sm mb-2">PRIMARY LANGUAGE</h3>
+                    <h3 className="text-arcade-blue text-sm mb-2">PRIMARY LANGUAGE</h3>
                     <div className="flex items-center">
                         <div
                             className="w-4 h-4 rounded-full mr-3 shadow-[0_0_8px]"
@@ -66,12 +66,12 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
 
                 {repo.repositoryTopics.edges.length > 0 && (
                     <div className="mb-6 bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
-                        <h3 className="text-[#ff38fd] text-sm mb-3">TOPICS</h3>
+                        <h3 className="text-arcade-pink text-sm mb-3">TOPICS</h3>
                         <div className="flex flex-wrap gap-2">
                             {repo.repositoryTopics.edges.map((edge, index) => (
                                 <span
                                     key={index}
-                                    className="px-3 py-1 text-sm border-2 border-[#00f3ff] rounded-full text-[#00f3ff] bg-black/20"
+                                    className="px-3 py-1 text-sm border-2 border-arcade-blue rounded-full text-arcade-blue bg-black/20"
                                 >
                                     {edge.node.topic.name}
                                 </span>
@@ -84,7 +84,7 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
                     href={repo.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center bg-[#2b1a45] hover:bg-[#3a2a55] border-2 border-[#ff38fd] text-[#ff38fd] p-3 rounded-lg transition-all hover:scale-105 group"
+                    className="w-full flex items-center justify-center bg-[#2b1a45] hover:bg-[#3a2a55] border-2 border-arcade-pink text-arcade-pink p-3 rounded-lg transition-all hover:scale-105 group"
                 >
                     GITHUB LINK
                     <span className="ml-2 group-hover:translate-x-1 transition-transform">

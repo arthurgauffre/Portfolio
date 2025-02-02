@@ -9,6 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
+        arcade: {
+          pink: "#ff38fd",
+          blue: "#00f3ff",
+          purple: "#6b5288",
+          green: "#00ff00",
+        },
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

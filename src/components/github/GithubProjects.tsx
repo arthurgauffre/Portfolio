@@ -18,9 +18,9 @@ export default function GithubProjects({ repositories }: { repositories: PinnedR
             </div>
 
             <div className="relative w-[50%] h-full">
-                <h1 className="text-4xl text-[#00f3ff] mb-8 text-center drop-shadow-[0_0_12px_rgba(0,243,255,0.5)]">
-                    <span className="text-[#ff38fd]">ARCADE</span> TERMINAL
-                    <div className="text-sm mt-2 text-[#00ff00]">SELECT YOUR MISSION</div>
+                <h1 className="text-4xl text-arcade-blue mb-8 text-center drop-shadow-[0_0_12px_rgba(0,243,255,0.5)]">
+                    <span className="text-arcade-pink">ARCADE</span> TERMINAL
+                    <div className="text-sm mt-2 text-arcade-green">SELECT YOUR MISSION</div>
                 </h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%] mx-auto">
@@ -39,16 +39,16 @@ export default function GithubProjects({ repositories }: { repositories: PinnedR
                             </button>
                         ))
                     ) : (
-                        <div className="col-span-3 text-center p-8 border-4 border-[#ff38fd] rounded-lg animate-pulse">
-                            <p className="text-xl text-[#00f3ff]">INITIALIZING PROTOCOL...</p>
-                            <p className="text-sm text-[#ff38fd] mt-2">(SYSTEM_CALL: AWAITING_REPOSITORIES)</p>
+                        <div className="col-span-3 text-center p-8 border-4 border-arcade-pink rounded-lg animate-pulse">
+                            <p className="text-xl text-arcade-blue">INITIALIZING PROTOCOL...</p>
+                            <p className="text-sm text-arcade-pink mt-2">(SYSTEM_CALL: AWAITING_REPOSITORIES)</p>
                         </div>
                     )}
                 </div>
             </div>
 
             {/* Terminal Footer */}
-            <div className="absolute bottom-0 w-full py-3 bg-[#1a0a2b] border-t-4 border-[#ff38fd] text-center text-sm text-[#00f3ff]">
+            <div className="absolute bottom-0 w-full py-3 bg-[#1a0a2b] border-t-4 border-arcade-pink text-center text-sm text-arcade-blue">
                 [ SYSTEM READY | COSMIC_ENGINE v2.4.1 | CONNECTED TO GITHUB_API ]
             </div>
 
