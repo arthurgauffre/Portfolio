@@ -1,14 +1,10 @@
 "use client";
 import { useState } from "react";
 import MenuButton from "./MenuButton";
+import ContactsMenu from "./contactsMenu";
 
 export default function Menu() {
     const [isOpen, setIsOpen] = useState(true);
-
-    const mail = process.env.NEXT_PUBLIC_MAIL_PRO;
-    const linkedin = process.env.NEXT_PUBLIC_LINKEDIN_LINK;
-    const github = process.env.NEXT_PUBLIC_GITHUB_LINK;
-    const phone = process.env.NEXT_PUBLIC_PHONE;
 
     return (
         <div className="fixed left-0 z-50 pixel-font">
@@ -37,33 +33,7 @@ export default function Menu() {
                         <MenuButton name="Profile" redirect="/profile" />
                         <MenuButton name="Projects" redirect="/projects" />
 
-                        <div className="mt-8 border-t-2 border-[#3a2a55] pt-4">
-                            <h3 className="text-arcade-pink text-sm mb-3">CONTACTS</h3>
-                            <div className="space-y-3">
-                                <div className="text-arcade-blue text-sm">
-                                    <span className="glow-cyan">{mail}</span>
-                                </div>
-                                <div className="text-arcade-blue text-sm">
-                                    <span className="glow-cyan">{phone}</span>
-                                </div>
-                                <a
-                                    href={linkedin || '#'}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center text-arcade-blue hover:text-arcade-pink transition-colors text-sm"
-                                >
-                                    LinkedIn
-                                </a>
-                                <a
-                                    href={github || '#'}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center text-arcade-blue hover:text-arcade-pink transition-colors text-sm"
-                                >
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
+                        <ContactsMenu />
                     </div>
 
                     <div className="sticky bottom-0 w-full p-2 bg-arcade-darkPurple border-t-2 border-arcade-pink text-center text-sm text-arcade-blue">
