@@ -4,6 +4,7 @@ import { useState } from "react";
 import GitHubBox from "./GithubBox";
 import { PinnedRepositoryData } from "./githubQuery";
 import ProjectDetailModal from "./ProjectDetailsModal";
+import BottomBar from "./bottomBar";
 
 export default function GithubProjects({ repositories }: { repositories: PinnedRepositoryData[] }) {
     const [showModal, setShowModal] = useState(false);
@@ -47,10 +48,7 @@ export default function GithubProjects({ repositories }: { repositories: PinnedR
                 </div>
             </div>
 
-            {/* Terminal Footer */}
-            <div className="absolute bottom-0 w-full py-3 bg-arcade-darkPurple border-t-4 border-arcade-pink text-center text-sm text-arcade-blue">
-                [ PROJECTS SECTION | GITHUB | CONNECTED TO GITHUB_API ]
-            </div>
+            <BottomBar />
 
             {showModal && (
                 <ProjectDetailModal repo={repositories[indexRepo]} setShowModal={setShowModal} />

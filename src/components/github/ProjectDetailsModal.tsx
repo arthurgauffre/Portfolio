@@ -1,3 +1,4 @@
+import BottomBar from "./bottomBar";
 import { PinnedRepositoryData } from "./githubQuery";
 
 export default function ProjectDetailModal({ repo, setShowModal }: { repo: PinnedRepositoryData, setShowModal: (value: boolean) => void }) {
@@ -21,7 +22,6 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
                 <div className="mb-6 border-b-2 border-[#3a2a55] pb-4">
                     <h2 className="text-3xl text-arcade-blue drop-shadow-[0_0_8px_rgba(0,243,255,0.5)]">
                         {repo.name}
-                        <span className="text-arcade-pink ml-3 text-xl">v1.0</span>
                     </h2>
                     <p className="text-arcade-green mt-2 text-lg glow-green">
                         {repo.description || "CLASSIFIED DATA - ACCESS RESTRICTED"}
@@ -92,6 +92,7 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
                     </span>
                 </a>
             </div>
+            <BottomBar />
         </div>
     );
 }
