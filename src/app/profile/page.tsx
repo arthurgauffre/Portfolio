@@ -62,7 +62,7 @@ export default function Profile() {
 
                     {/* Skills Section */}
                     <div className="bg-arcade-dark p-6 rounded-lg border-2 border-arcade-pink">
-                        <h2 className="text-2xl text-arcade-pink mb-4">CORE COMPETENCIES</h2>
+                        <h2 className="text-2xl text-arcade-pink mb-4">SKILLS</h2>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                             {profileConfig.skills.map((skill, index) => (
                                 <div 
@@ -78,7 +78,7 @@ export default function Profile() {
 
                     {/* Social Links */}
                     <div className="bg-arcade-dark p-6 rounded-lg border-2 border-arcade-pink">
-                        <h2 className="text-2xl text-arcade-pink mb-4">SYSTEM LINKS</h2>
+                        <h2 className="text-2xl text-arcade-pink mb-4">LINKS</h2>
                         <div className="flex flex-col space-y-3">
                             <a
                                 href={profileConfig.github}
@@ -86,8 +86,7 @@ export default function Profile() {
                                 rel="noopener noreferrer"
                                 className="flex items-center text-arcade-blue hover:text-arcade-pink transition-colors"
                             >
-                                <span className="mr-2">🐙</span>
-                                GitHub Profile
+                                GitHub
                             </a>
                             <a
                                 href={profileConfig.linkedin}
@@ -95,8 +94,7 @@ export default function Profile() {
                                 rel="noopener noreferrer"
                                 className="flex items-center text-arcade-blue hover:text-arcade-pink transition-colors"
                             >
-                                <span className="mr-2">🔗</span>
-                                LinkedIn Connection
+                                LinkedIn
                             </a>
                         </div>
                     </div>

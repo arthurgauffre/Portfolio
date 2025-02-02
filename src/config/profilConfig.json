@@ -1,19 +1,23 @@
 {
     "name": "Arthur GAUFFRE",
-    "title": "Full-Stack Developer | Cyber Security Enthusiast",
-    "bio": "Seasoned code warrior specializing in full-stack development and security protocols. Adept at navigating complex systems and fortifying digital infrastructures against modern threats.",
+    "title": "Backend Developer",
+    "bio": "Student Developer in third year at Epitech Technology Bordeaux.",
     "skills": [
-        "React.js",
-        "TypeScript",
-        "Node.js",
+        "C",
+        "C++",
         "Python",
-        "Cybersecurity",
+        "Git",
+        "Github",
+        "Devops",
+        "NuxtJs",
+        "FastAPI",
+        "React",
+        "TypeScript",
         "Docker",
-        "Kubernetes",
-        "AWS",
+        "TailwindCss",
         "PostgreSQL",
-        "Blockchain"
+        "Vulkan"
     ],
-    "github": "https://github.com/yourusername",
-    "linkedin": "https://linkedin.com/in/yourprofile"
+    "github": "https://linkedin.com/in/arthur-gauffre",
+    "linkedin": "https://github.com/arthurgauffre"
 }
