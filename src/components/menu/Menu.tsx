@@ -36,7 +36,6 @@ export default function Menu() {
                         <MenuButton name="Home" redirect="/" />
                         <MenuButton name="Profile" redirect="/profile" />
                         <MenuButton name="Projects" redirect="/projects" />
-                        <MenuButton name="Ressources" redirect="/ressources" />
 
                         <div className="mt-8 border-t-2 border-[#3a2a55] pt-4">
                             <h3 className="text-arcade-pink text-sm mb-3">CONTACT PROTOCOLS</h3>
