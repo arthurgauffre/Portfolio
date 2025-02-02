@@ -1,8 +1,10 @@
 {
-    "welcomeMessage": "Hi! I'm Arthur Gauffre, a junior developer learning at Epitech Technology Bordeaux.",
+    "welcomeTitle": "Hi! I'm Arthur Gauffre",
+    "welcomeDescription": "A junior developer learning at Epitech Technology Bordeaux.",
+    "statsTitle": "My Statistics",
     "stats": [
         {
-            "title": "COMBAT STATS",
+            "title": "Github Stats",
             "imageUrl": "https://github-readme-stats.vercel.app/api?username=arthurgauffre&theme=shades-of-purple&show_icons=true&count_private=true",
             "altText": "GitHub Combat Statistics"
         },
