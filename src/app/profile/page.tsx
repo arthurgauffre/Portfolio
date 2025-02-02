@@ -15,7 +15,7 @@ export default function Profile() {
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                     className={`absolute top-4 transition-all duration-500 ${
                         isSidebarOpen ? 'left-[-28]' : 'right-0'
-                    } bg-[#1a0a2b] text-arcade-blue p-2 rounded-l-full border-2 border-r-0 border-arcade-pink hover:bg-[#2b1a45] hover:text-arcade-pink z-50`}
+                    } bg-arcade-darkPurple text-arcade-blue p-2 rounded-l-full border-2 border-r-0 border-arcade-pink hover:bg-[#2b1a45] hover:text-arcade-pink z-50`}
                 >
                     {isSidebarOpen ? (
                         <span className="text-xl">»</span>
@@ -35,7 +35,7 @@ export default function Profile() {
                         <embed 
                             src="/pdf/CV_ArthurGAUFFRE.pdf" 
                             type="application/pdf"
-                            className="w-full h-full bg-[#1a0a2b] rounded-lg"
+                            className="w-full h-full bg-arcade-darkPurple rounded-lg"
                         />
                     </div>
                 )}

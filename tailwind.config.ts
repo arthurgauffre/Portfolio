@@ -13,6 +13,7 @@ export default {
           pink: "#ff38fd",
           blue: "#00f3ff",
           purple: "#6b5288",
+          darkPurple: "#1a0a2b",
           green: "#00ff00",
         },
         background: "var(--background)",

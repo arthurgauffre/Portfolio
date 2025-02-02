@@ -48,7 +48,7 @@ export default function GithubProjects({ repositories }: { repositories: PinnedR
             </div>
 
             {/* Terminal Footer */}
-            <div className="absolute bottom-0 w-full py-3 bg-[#1a0a2b] border-t-4 border-arcade-pink text-center text-sm text-arcade-blue">
+            <div className="absolute bottom-0 w-full py-3 bg-arcade-darkPurple border-t-4 border-arcade-pink text-center text-sm text-arcade-blue">
                 [ SYSTEM READY | COSMIC_ENGINE v2.4.1 | CONNECTED TO GITHUB_API ]
             </div>
 

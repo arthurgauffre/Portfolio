@@ -29,14 +29,14 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
+                    <div className="bg-arcade-darkPurple p-4 rounded border-2 border-[#3a2a55]">
                         <h3 className="text-[#ffd700] text-sm mb-2">STAR</h3>
                         <div className="flex items-center">
                             <span className="text-2xl text-[#ffd700] mr-2">★</span>
                             <span className="text-xl text-white">{repo.stargazerCount}</span>
                         </div>
                     </div>
-                    <div className="bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
+                    <div className="bg-arcade-darkPurple p-4 rounded border-2 border-[#3a2a55]">
                         <h3 className="text-arcade-green text-sm mb-2">FORK</h3>
                         <div className="flex items-center">
                             <span className="text-2xl text-arcade-green mr-2">👥</span>
@@ -45,7 +45,7 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
                     </div>
                 </div>
 
-                <div className="mb-6 bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
+                <div className="mb-6 bg-arcade-darkPurple p-4 rounded border-2 border-[#3a2a55]">
                     <h3 className="text-arcade-blue text-sm mb-2">PRIMARY LANGUAGE</h3>
                     <div className="flex items-center">
                         <div
@@ -65,7 +65,7 @@ export default function ProjectDetailModal({ repo, setShowModal }: { repo: Pinne
                 </div>
 
                 {repo.repositoryTopics.edges.length > 0 && (
-                    <div className="mb-6 bg-[#1a0a2b] p-4 rounded border-2 border-[#3a2a55]">
+                    <div className="mb-6 bg-arcade-darkPurple p-4 rounded border-2 border-[#3a2a55]">
                         <h3 className="text-arcade-pink text-sm mb-3">TOPICS</h3>
                         <div className="flex flex-wrap gap-2">
                             {repo.repositoryTopics.edges.map((edge, index) => (

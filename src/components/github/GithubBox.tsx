@@ -16,7 +16,7 @@ export default function GitHubBox({ repo, index }: { repo: PinnedRepositoryData;
                 {repo.name}
             </h2>
 
-            <div className="flex justify-between items-center bg-[#1a0a2b] p-2 rounded-md border-2 border-[#3a2a55]">
+            <div className="flex justify-between items-center bg-arcade-darkPurple p-2 rounded-md border-2 border-[#3a2a55]">
                 <div className="text-center">
                     <p className="text-[#ffd700] text-sm">STAR</p>
                     <div className="flex items-center">

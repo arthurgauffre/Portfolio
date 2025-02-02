@@ -1,0 +1,24 @@
+{
+    "welcomeMessage": "CYBER DEVELOPER PROFILE v2.0",
+    "stats": [
+        {
+            "title": "COMBAT STATS",
+            "imageUrl": "https://github-readme-stats.vercel.app/api?username=arthurgauffre&theme=shades-of-purple&show_icons=true&count_private=true",
+            "altText": "GitHub Combat Statistics"
+        },
+        {
+            "title": "Languages",
+            "imageUrl": "https://github-readme-stats.vercel.app/api/top-langs/?username=arthurgauffre&theme=shades-of-purple&layout=compact",
+            "altText": "Coding Weapons Analysis"
+        },
+        {
+            "title": "Wakatime",
+            "imageUrl": "https://github-readme-stats.vercel.app/api/wakatime?username=Kaisel&layout=compact&theme=radical",
+            "altText": "Operation Time Logs"
+        }
+    ],
+    "githubLink": {
+        "url": "https://github.com/arthurgauffre",
+        "buttonText": "Github Link"
+    }
+}

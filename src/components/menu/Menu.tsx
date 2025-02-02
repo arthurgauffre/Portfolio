@@ -16,7 +16,7 @@ export default function Menu() {
                 onClick={() => setIsOpen(!isOpen)}
                 className={`absolute top-4 transition-all duration-500 ${
                     isOpen ? 'left-[240px]' : 'left-0'
-                } bg-[#1a0a2b] text-arcade-blue p-2 rounded-r-full border-2 border-l-0 border-arcade-pink hover:bg-[#2b1a45] hover:text-arcade-pink z-50`}
+                } bg-arcade-darkPurple text-arcade-blue p-2 rounded-r-full border-2 border-l-0 border-arcade-pink hover:bg-[#2b1a45] hover:text-arcade-pink z-50`}
             >
                 {isOpen ? <span className="text-xl">«</span> : <span className="text-xl">»</span>}
             </button>
@@ -24,7 +24,7 @@ export default function Menu() {
             <div className={`fixed h-screen transition-all duration-500 ${
                 isOpen ? 'translate-x-0' : '-translate-x-full'
             }`}>
-                <div className="w-[240px] h-full bg-gradient-to-b from-[#0a0a0a] to-[#1a0a2b] border-r-4 border-arcade-pink relative flex flex-col">
+                <div className="w-[240px] h-full bg-gradient-to-b from-[#0a0a0a] to-arcade-darkPurple border-r-4 border-arcade-pink relative flex flex-col">
                     {/* Pixel Corners */}
                     <div className="absolute top-2 left-2 w-2 h-2 bg-arcade-pink"></div>
                     <div className="absolute top-2 right-2 w-2 h-2 bg-arcade-pink"></div>
@@ -32,9 +32,6 @@ export default function Menu() {
                     <div className="absolute bottom-2 right-2 w-2 h-2 bg-arcade-pink"></div>
 
                     <div className="flex flex-col p-4 space-y-4 pt-16 flex-grow overflow-y-auto">
-                        <div className="mb-8 mt-4 px-4 py-2 border-2 border-arcade-blue rounded-lg text-center">
-                            <span className="text-arcade-blue text-xl glow-cyan">MAIN MENU</span>
-                        </div>
                         
                         <MenuButton name="Home" redirect="/" />
                         <MenuButton name="Profile" redirect="/profile" />
@@ -70,7 +67,7 @@ export default function Menu() {
                         </div>
                     </div>
 
-                    <div className="sticky bottom-0 w-full p-2 bg-[#1a0a2b] border-t-2 border-arcade-pink text-center text-sm text-arcade-blue">
+                    <div className="sticky bottom-0 w-full p-2 bg-arcade-darkPurple border-t-2 border-arcade-pink text-center text-sm text-arcade-blue">
                         [ SYSTEM MENU v1.4.2 ]
                     </div>
                 </div>
