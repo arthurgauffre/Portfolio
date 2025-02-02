@@ -2,7 +2,7 @@ import homeConfig from '../config/homeConfig.json';
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center bg-arcade-dark p-8 pixel-font overflow-y-auto">
+    <div className="w-full min-h-screen flex flex-col items-center bg-arcade-darkGrey p-8 pixel-font overflow-y-auto">
       <div className="max-w-6xl w-full mb-12">
         <div className="flex flex-col md:flex-row items-center gap-8 bg-arcade-darkPurple p-8 rounded-lg border-2 border-arcade-pink">
           <img
@@ -42,7 +42,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-        /</div>
+        </div>
     </div>
   );
 }
