@@ -1,0 +1,19 @@
+{
+    "name": "Arthur GAUFFRE",
+    "title": "Full-Stack Developer | Cyber Security Enthusiast",
+    "bio": "Seasoned code warrior specializing in full-stack development and security protocols. Adept at navigating complex systems and fortifying digital infrastructures against modern threats.",
+    "skills": [
+        "React.js",
+        "TypeScript",
+        "Node.js",
+        "Python",
+        "Cybersecurity",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "PostgreSQL",
+        "Blockchain"
+    ],
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourprofile"
+}
