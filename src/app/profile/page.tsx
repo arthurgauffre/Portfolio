@@ -1,5 +1,7 @@
+import BioProfile from "@/components/profile/bioProfile";
 import profileConfig from "../../config/profilConfig.json";
 import ProfilePdf from "@/components/profile/profilePdf";
+import ProfileSkills from "@/components/profile/profileSkills";
 import SocialLinks from "@/components/profile/socialLinks";
 
 export default function Profile() {
@@ -20,28 +22,9 @@ export default function Profile() {
                     </div>
 
                     {/* Bio Section */}
-                    <div className="bg-arcade-dark p-6 rounded-lg border-2 border-arcade-pink">
-                        <h2 className="text-2xl text-arcade-pink mb-4">PROFILE SUMMARY</h2>
-                        <p className="text-arcade-blue leading-relaxed">
-                            {profileConfig.bio}
-                        </p>
-                    </div>
+                    <BioProfile />
 
-                    {/* Skills Section */}
-                    <div className="bg-arcade-dark p-6 rounded-lg border-2 border-arcade-pink">
-                        <h2 className="text-2xl text-arcade-pink mb-4">SKILLS</h2>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            {profileConfig.skills.map((skill, index) => (
-                                <div 
-                                    key={index}
-                                    className="flex items-center text-arcade-blue p-2 border border-arcade-pink rounded"
-                                >
-                                    <div className="w-2 h-2 bg-arcade-pink mr-2"></div>
-                                    {skill}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                    <ProfileSkills />
 
                     <SocialLinks />
                 </div>

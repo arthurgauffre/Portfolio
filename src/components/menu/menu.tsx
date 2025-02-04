@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import MenuButton from "./MenuButton";
+import MenuButton from "./menuButton";
 import ContactsMenu from "./contactsMenu";
-import MenuCloseButton from "./MenuCloseButton";
+import MenuCloseButton from "./menuCloseButton";
 
 export default function Menu() {
     const [isOpen, setIsOpen] = useState(true);

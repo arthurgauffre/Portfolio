@@ -1,5 +1,5 @@
 import { GetPinnedRepositories, PinnedRepositoryData } from "@/components/github/githubQuery";
-import GithubProjects from "@/components/github/GithubProjects";
+import GithubProjects from "@/components/github/githubProjects";
 
 export default async function Home() {
     let repositories: PinnedRepositoryData[] = [];

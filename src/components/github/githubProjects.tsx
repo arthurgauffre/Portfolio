@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import GitHubBox from "./GithubBox";
+import GitHubBox from "./githubBox";
 import { PinnedRepositoryData } from "./githubQuery";
-import ProjectDetailModal from "./ProjectDetailsModal";
+import ProjectDetailModal from "./projectDetailsModal";
 import BottomBar from "./bottomBar";
 
 export default function GithubProjects({ repositories }: { repositories: PinnedRepositoryData[] }) {
