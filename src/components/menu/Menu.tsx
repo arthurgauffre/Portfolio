@@ -2,20 +2,14 @@
 import { useState } from "react";
 import MenuButton from "./MenuButton";
 import ContactsMenu from "./contactsMenu";
+import MenuCloseButton from "./MenuCloseButton";
 
 export default function Menu() {
     const [isOpen, setIsOpen] = useState(true);
 
     return (
         <div className="fixed left-0 z-50 pixel-font">
-            <button
-                onClick={() => setIsOpen(!isOpen)}
-                className={`absolute top-4 transition-all duration-500 ${
-                    isOpen ? 'left-[240px]' : 'left-0'
-                } bg-arcade-darkPurple text-arcade-blue p-2 rounded-r-full border-2 border-l-0 border-arcade-pink hover:bg-[#2b1a45] hover:text-arcade-pink z-50`}
-            >
-                {isOpen ? <span className="text-xl">«</span> : <span className="text-xl">»</span>}
-            </button>
+            <MenuCloseButton isOpen={isOpen} setIsOpen={setIsOpen} />
 
             <div className={`fixed h-screen transition-all duration-500 ${
                 isOpen ? 'translate-x-0' : '-translate-x-full'
