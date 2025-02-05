@@ -26,6 +26,7 @@ export default function Menu() {
                         <MenuButton name="Home" redirect="/" />
                         <MenuButton name="Profile" redirect="/profile" />
                         <MenuButton name="Projects" redirect="/projects" />
+                        <MenuButton name="Snake" redirect="/snake" />
 
                         <ContactsMenu />
                     </div>
